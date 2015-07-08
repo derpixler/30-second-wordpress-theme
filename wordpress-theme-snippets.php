@@ -17,6 +17,27 @@ Site Title
 Tagline
 <?php bloginfo('description'); ?>
 
+Header BG
+<?php echo get_template_directory_uri() ?>/assets/img
+
+
+	        <section id="header-main" class="site_header row" style="background:url('<?php echo get_template_directory_uri() ?>/assets/img/coverimage.jpg')">
+	        			
+	        	<a href="http://derpixler.github.io/30-second-wordpress-theme/" id="logo" class="logo"></a>
+                <h1>
+                  <a href="<?php echo home_url(); ?>">
+                    <?php wp_title(''); ?>
+                  </a>
+                </h1>
+                <p>
+                  <a href="<?php echo home_url(); ?>">
+                    <?php bloginfo('description'); ?>
+                  </a>
+                </p>
+                
+	        </section>
+
+
 <!-- Start post loop -->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -46,3 +67,4 @@ Instruction: Replace the two link elements that load stylesheets in the head sec
 
 Instruction: Place before closing body tag
 <?php wp_footer(); ?>
+
